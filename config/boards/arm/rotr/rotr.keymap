@@ -27,7 +27,7 @@
 		};
 		one {
 			//FIGMA LAYER | PREV | PLAY/PAUSE | NEXT
-			bindings = <&kp LG(LA(C)) &lt 4 LG(LA(V)) &kp LG(LA(V));
+			bindings = <&kp LG(LA(C)) &lt 4 LG(LA(V)) &kp LG(LA(V))>;
 			sensor-bindings = <&inc_dec_kp C_AC_ZOOM_IN C_AC_ZOOM_OUT>;
 			ledoverride;
           		  	r = <0>;
