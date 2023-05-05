@@ -35,7 +35,7 @@
                 ;
         };
 	
-	duplicate_figma_style: duplicate_figma {
+	duplicate_figma: duplicate_figma {
             label = "duplicate_figma";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -108,7 +108,7 @@
 		};
 		one {
 			//FIGMA LAYER | PREV | PLAY/PAUSE | NEXT
-			bindings = <&copy_figma_style &lt 4 duplicate_figma &paste_figma_style>;
+			bindings = <&copy_figma_style &lt 4 $duplicate_figma &paste_figma_style>;
 			sensor-bindings = <&inc_dec_kp C_AC_ZOOM_IN C_AC_ZOOM_OUT>;
 			ledoverride;
           		  	r = <0>;
