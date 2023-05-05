@@ -13,7 +13,7 @@
 
 / {
     macros {
-        my_macro_1: copy_figma_style{
+        copy_figma_style: copy_figma_style{
             label = "copy_figma_style";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -24,7 +24,7 @@
                 ;
         };
 	
-	my_macro_2: paste_figma_style {
+	paste_figma_style: paste_figma_style {
             label = "paste_figma_style";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -35,7 +35,7 @@
                 ;
         };
 	
-	my_macro_3: duplicate_figma {
+	paste_figma_style: duplicate_figma {
             label = "duplicate_figma";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -46,7 +46,7 @@
                 ;
         };
 	
-	my_macro_4: change_window	{
+	change_window: change_window	{
             label = "change_window";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -56,7 +56,7 @@
                 ;
         };
 
-	my_macro_5: mute_mic {
+	mute_mic: mute_mic {
             label = "mute_mic";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -67,7 +67,7 @@
                 ;
         };
 	
-		my_macro_6: mute_cam {
+		mute_cam: mute_cam {
             label = "mute_cam";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -78,7 +78,7 @@
                 ;
         };
 
-		my_macro_7: share_screen {
+		share_screen: share_screen {
             label = "share_screen";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
