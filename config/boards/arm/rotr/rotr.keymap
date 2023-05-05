@@ -6,8 +6,90 @@
 &inc_dec_kp {
 	triggers-per-rotation = <4>;
 };
+
 &def_lshft {
 	triggers-per-rotation = <4>;
+};
+
+/ {
+    macros {
+        my_macro_1: my_macro_1{
+            label = "copy_figma_style";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LGUI & LALT>
+                , <&macro_tap &kp C>
+                , <&macro_release &kp LGUI &LALT>
+                ;
+        };
+	
+	my_macro_2: my_macro_2 {
+            label = "paste_figma_style";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LGUI & LALT>
+                , <&macro_tap &kp V>
+                , <&macro_release &kp LGUI &LALT>
+                ;
+        };
+	
+	my_macro_3: my_macro_3 {
+            label = "duplicate_figma";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LGUI>
+                , <&macro_tap &kp D>
+                , <&macro_release &kp LGUI>
+                ;
+        };
+	
+	my_macro_4: my_macro_4	{
+            label = "change_window";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LGUI TAB>
+                , <&macro_release &kp LGUI TAB>
+                ;
+        };
+
+	my_macro_5: my_macro_5 {
+            label = "mute_mic";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LGUI SHIFT>
+		, <&macro_tap &kp M>
+                , <&macro_release &kp LGUI SHIFT>
+                ;
+        };
+	
+		my_macro_6: my_macro_6 {
+            label = "mute_cam";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LGUI SHIFT>
+		, <&macro_tap &kp O>
+                , <&macro_release &kp LGUI SHIFT>
+                ;
+        };
+
+		my_macro_7: my_macro_7 {
+            label = "share_screen";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LGUI SHIFT>
+		, <&macro_tap &kp E>
+                , <&macro_release &kp LGUI SHIFT>
+                ;
+        };
+	
+    };
 };
 
 / {
@@ -15,28 +97,50 @@
 		compatible = "zmk,keymap";
 
 		default_layer {
-			//PREV | PLAY/PAUSE | NEXT
-			bindings = <&kp C_MUTE &lt 4 F13 &kp C_PP>;
+			//MUSIC LAYER | PREV | PLAY/PAUSE | NEXT
+			bindings = <&kp C_PREV &lt 4 SPACE &kp C_NEXT>;
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+			ledoverride;
+            			r = <245>;
+		    		g = <235>;
+            			b = <224>;
+
 		};
 		one {
-			//PREV | PLAY/PAUSE | NEXT
-			bindings = <&kp C_PREV &lt 4 C_PP &kp C_NEXT>;
-			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+			//FIGMA LAYER | PREV | PLAY/PAUSE | NEXT
+			bindings = <&copy_figma_style &lt 4 duplicate_figma &paste_figma_style>;
+			sensor-bindings = <&inc_dec_kp C_AC_ZOOM_IN C_AC_ZOOM_OUT>;
+			ledoverride;
+          		  	r = <0>;
+            			g = <135>;
+            			b = <104>;
+
+			
 		};
 		two {
-			//PREV | PLAY/PAUSE | NEXT
-			bindings = <&kp LEFT &lt 4 SPACE &kp RIGHT>;
-			sensor-bindings = <&inc_dec_kp PG_UP PG_DN>;
+			//YOUTUBE LAYER | FullScreen | PLAY/PAUSE | Cinema Mode
+			bindings = <&kp F &lt 4 SPACE &kp T>;
+			sensor-bindings = <&inc_dec_kp L J>;
+			ledoverride;
+            			r = <255>;
+            			g = <0>;
+            			b = <0>;
+
 		};
 		three {
-			//PREV | PLAY/PAUSE | NEXT
-			bindings = <&kp C_MUTE &lt 4 SPACE &kp C_PP>;
+			//TEAMS LAYER | PREV | PLAY/PAUSE | NEXT
+			bindings = <&mute_mic &lt 4 share_screen &mute_cam>;
+			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+			ledoverride;
+            			r = <123>;
+            			g = <131>;
+            			b = <235>;
 		};
 		shift {
-			//PREV | PLAY/PAUSE | NEXT
-			bindings = <&bt BT_CLR &trans &rgb_ug RGB_TOG>;
+			//Stuff i can use on ALL layers |  | Stuff i can use on ALL layers | [Layer Switch]
+			bindings = <&rgb_ug RGB_TOG &trans &change_window>;
 			sensor-bindings = <&def_lshft>;
+
 		};
 	};
 };
