@@ -108,7 +108,7 @@
 		};
 		one {
 			//FIGMA LAYER | PREV | PLAY/PAUSE | NEXT
-			bindings = <&copy_figma_style &lt 4 duplicate_figma &paste_figma_style>;
+			bindings = <&copy_figma_style &lt 4 $duplicate_figma &paste_figma_style>;
 			sensor-bindings = <&inc_dec_kp C_AC_ZOOM_IN C_AC_ZOOM_OUT>;
 			ledoverride;
           		  	r = <0>;
@@ -129,7 +129,7 @@
 		};
 		three {
 			//TEAMS LAYER | PREV | PLAY/PAUSE | NEXT
-			bindings = <&mute_mic &lt 4 share_screen &mute_cam>;
+			bindings = <&mute_mic &lt 4 $share_screen &mute_cam>;
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
 			ledoverride;
             			r = <123>;
