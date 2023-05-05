@@ -31,7 +31,7 @@
 		};
 		three {
 			//PREV | PLAY/PAUSE | NEXT
-			bindings = <&kp C_MUTE &lt 4 F13 &kp C_PP>;
+			bindings = <&kp C_MUTE &lt 4 SPACE &kp C_PP>;
 		};
 		shift {
 			//PREV | PLAY/PAUSE | NEXT
