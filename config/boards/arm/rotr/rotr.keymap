@@ -11,8 +11,6 @@
 	triggers-per-rotation = <4>;
 };
 
-};
-
 / {
 	keymap {
 		compatible = "zmk,keymap";
