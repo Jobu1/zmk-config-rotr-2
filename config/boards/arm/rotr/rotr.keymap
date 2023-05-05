@@ -35,7 +35,7 @@
                 ;
         };
 	
-	paste_figma_style: duplicate_figma {
+	duplicate_figma_style: duplicate_figma {
             label = "duplicate_figma";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
