@@ -24,7 +24,7 @@
 		    		g = <131>;
             			b = <81>;
 
-		};
+			};
 		one {
 			//FIGMA LAYER | PREV | PLAY/PAUSE | NEXT
 			bindings = <&kp LG(LA(C)) &lt 4 LG(LA(V)) &kp LG(LA(V))>;
@@ -35,7 +35,7 @@
             			b = <111>;
 
 			
-		};
+			};
 		two {
 			//YOUTUBE LAYER | FullScreen | PLAY/PAUSE | Cinema Mode
 			bindings = <&kp F &lt 4 SPACE &kp T>;
@@ -45,7 +45,7 @@
             			g = <0>;
             			b = <0>;
 
-		};
+			};
 		three {
 			//TEAMS LAYER | PREV | PLAY/PAUSE | NEXT
 			bindings = <&kp LS(LG(M)) &lt 4 LS(LG(E))  &kp LS(LG(O))>;
@@ -54,10 +54,11 @@
             			r = <123>;
             			g = <44>;
             			b = <191>;
-		};
+			};
 		shift {
 			//Stuff i can use on ALL layers |  | Stuff i can use on ALL layers | [Layer Switch]
 			bindings = <&kp LG(GRAVE) &trans &sk LG(TAB)>;
 			sensor-bindings = <&def_lshft>;
+			};
 	};
 };
