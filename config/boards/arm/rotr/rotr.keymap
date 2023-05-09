@@ -57,7 +57,7 @@
 		};
 		shift {
 			//Stuff i can use on ALL layers |  | Stuff i can use on ALL layers | [Layer Switch]
-			bindings = <&kp LG(GRAVE) &trans &kp LG(TAB)>;
+			bindings = <&kp LG(GRAVE) &trans &sk LG(TAB)>;
 			sensor-bindings = <&def_lshft>;
 
 		};
